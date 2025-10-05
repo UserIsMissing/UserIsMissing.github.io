@@ -2012,10 +2012,11 @@ input, select, textarea {
 			display: none;
 		}
 
+		/* Robot Icon */
 		.icon.featured {
 			position: relative;
 			display: inline-block;
-			background-color: #03bafc;
+			background-color: #827a7c;
 			width: 9em;
 			padding: 1.75em 0 0.75em 0;
 			border-top-left-radius: 5px;
@@ -2030,12 +2031,13 @@ input, select, textarea {
 				color: #fff;
 			}
 
+			/* Robot Icon */
 			.icon.featured:after {
 				content: '';
 				position: absolute;
 				bottom: -1.95em;
 				left: 0;
-				border-top: solid 2em #03bafc;
+				border-top: solid 2em #827a7c;
 				border-left: solid 4.5em transparent;
 				border-right: solid 4.5em transparent;
 			}
