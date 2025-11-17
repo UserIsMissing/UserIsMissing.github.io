@@ -2112,7 +2112,7 @@ input, select, textarea {
 
 		/* Adjust header spacing (banner is in-flow now) */
 		#header {
-			padding-top: 0em; /* keep some top spacing for visual balance */
+			padding-top: 125px; /* keep some top spacing for visual balance */
 		}
 
 		@media screen and (max-width: 736px) {
@@ -2123,25 +2123,56 @@ input, select, textarea {
 
 /* Top bar wrapper: stays in-flow by default. When .floating, becomes fixed and translucent */
 
-		.top-bar {
+	.top-bar {
+		display: block;
+		width: 100%;
+		position: -webkit-sticky; /* Safari */
+		position: fixed;
+		top: 0;
+		z-index: 900;
+		background: rgba(241, 251, 255, 0.78); /* translucent */
+		backdrop-filter: blur(6px) saturate(120%);
+		box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+		border-bottom: 1px solid rgba(0,0,0,0.12);
+		transition: background 240ms ease, transform 220ms ease;
+	}		/* Custom dropdown for Projects in top bar */
+		.top-bar #nav > ul > li {
+			position: relative;
+		}
+		.top-bar #nav > ul > li > ul {
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 100%;
+			background: #fff;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+			min-width: 220px;
+			z-index: 1001;
+			padding: 0.5em 0;
+			border-radius: 0 0 8px 8px;
+		}
+		.top-bar #nav > ul > li:hover > ul,
+		.top-bar #nav > ul > li:focus-within > ul {
+			display: block;
+		}
+		.top-bar #nav > ul > li > ul > li {
 			display: block;
 			width: 100%;
-			position: -webkit-sticky; /* Safari */
-			position: sticky;
-			top: 0;
-			z-index: 900;
+		}
+		.top-bar #nav > ul > li > ul > li > a {
+			padding: 0.7em 1.5em;
+			display: block;
+			color: #222;
+			background: none;
+			text-decoration: none;
+			font-style: normal;
+		}
+		.top-bar #nav > ul > li > ul > li > a:hover {
+			background: #f4f4f4;
 		}
 
-		.top-bar.floating {
-			/* visuals only: sticky handles the positioning without changing flow */
-			background: rgba(241, 251, 255, 0.78); /* translucent */
-			backdrop-filter: blur(6px) saturate(120%);
-			box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-			border-bottom: 1px solid rgba(0,0,0,0.12);
-			transition: background 240ms ease, transform 220ms ease;
-		}
 
-		/* When top-bar floats, make nav links white for contrast */
+	/* When top-bar floats, make nav links white for contrast */
 		.top-bar.floating #nav > ul > li > a {
 			color: #5d5d5d !important;
 		}
@@ -2201,7 +2232,7 @@ input, select, textarea {
 	.dropotron {
 		border-radius: 5px;
 		background-color: #252122;
-		background-color: rgba(34, 30, 31, 0.98);
+		background-color: rgba(255, 255, 255, 0.98);
 		padding: 1.25em 1.5em 1.25em 1.5em;
 		font-style: italic;
 		min-width: 13em;
@@ -2214,7 +2245,7 @@ input, select, textarea {
 
 		/* Dropdown links */
 		.dropotron a, .dropotron span {
-			color: #aaa;
+			color: #252525;
 			text-decoration: none;
 			-moz-transition: color .25s ease-in-out;
 			-webkit-transition: color .25s ease-in-out;
@@ -2227,7 +2258,7 @@ input, select, textarea {
 		}
 
 			.dropotron li:hover > a, .dropotron li:hover > span {
-				color: #fff;
+				color: #03bafc;
 			}
 
 		.dropotron.level-0 {
