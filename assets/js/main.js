@@ -59,4 +59,33 @@
 					visibleClass: 'navPanel-visible'
 				});
 
+
+	// Top-bar floating behavior: float the top-bar (name + nav) together when scrolling
+
+		(function() {
+			var $topBar = $('.top-bar');
+			if (!$topBar.length) return;
+			var topBarOffset = $topBar.offset().top;
+			var ticking = false;
+
+			$window.on('scroll', function() {
+				if (!ticking) {
+					ticking = true;
+					window.requestAnimationFrame(function() {
+						var st = $window.scrollTop();
+						if (st >= topBarOffset) {
+							$topBar.addClass('floating');
+							$body.addClass('top-bar-floating');
+						} else {
+							$topBar.removeClass('floating');
+							$body.removeClass('top-bar-floating');
+						}
+						ticking = false;
+					});
+				}
+			});
+
+		})();
+
+
 })(jQuery);

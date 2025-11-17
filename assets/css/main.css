@@ -2082,26 +2082,97 @@ input, select, textarea {
 			line-height: 1;
 		}
 
+/* Name banner behind header title */
+
+		/* Make the name banner full-width and part of the page flow */
+
+		.name-banner {
+			display: block;
+			width: 100%;
+			background: #03bafc; /* solid requested banner color (no translucency) */
+			padding: 0.9em 0; /* vertical padding */
+			box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+			border-bottom: 1px solid rgba(0,0,0,0.08);
+			transition: padding 200ms ease, box-shadow 200ms ease;
+		}
+
+		.name-banner > h1,
+		.name-banner > p,
+		.name-banner h1,
+		.name-banner p {
+			color: #ffffff;
+			margin: 0;
+			text-align: center;
+		}
+
+		/* Keep the title compact inside the banner */
+		.name-banner h1 { font-size: 1.6rem; font-weight: 900; display:block; }
+		.name-banner p { font-size: 0.95rem; opacity: 0.95; display:block; }
+
+
+		/* Adjust header spacing (banner is in-flow now) */
+		#header {
+			padding-top: 0em; /* keep some top spacing for visual balance */
+		}
+
+		@media screen and (max-width: 736px) {
+			.name-banner h1 { font-size: 1.25rem; }
+			.name-banner p { font-size: 0.9rem; }
+			#header { padding-top: 0em; }
+		}
+
+/* Top bar wrapper: stays in-flow by default. When .floating, becomes fixed and translucent */
+
+		.top-bar {
+			display: block;
+			width: 100%;
+			position: -webkit-sticky; /* Safari */
+			position: sticky;
+			top: 0;
+			z-index: 900;
+		}
+
+		.top-bar.floating {
+			/* visuals only: sticky handles the positioning without changing flow */
+			background: rgba(241, 251, 255, 0.78); /* translucent */
+			backdrop-filter: blur(6px) saturate(120%);
+			box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+			border-bottom: 1px solid rgba(0,0,0,0.12);
+			transition: background 240ms ease, transform 220ms ease;
+		}
+
+		/* When top-bar floats, make nav links white for contrast */
+		.top-bar.floating #nav > ul > li > a {
+			color: #5d5d5d !important;
+		}
+
+		/* no body offset needed when using sticky positioning */
+
 /* Nav */
 
 	#nav {
-		margin: 2.5em 0 0 0;
+		margin: 1.5em;
+		/* padding-bottom: 0.8em; extra space below nav tabs */
 	}
 
+		/* Nav menu */
 		#nav > ul {
 			margin: 0;
 		}
 
+			/* Nav items */
 			#nav > ul > li {
 				display: inline-block;
 				font-style: italic;
 				margin: 0 0.35em 0 0.35em;
 			}
 
+				/* Hide submenus by default */
 				#nav > ul > li > ul {
 					display: none;
 				}
 
+				/* Nav links */
 				#nav > ul > li > a {
 					border-radius: 5px;
 					color: #5d5d5d;
@@ -2114,16 +2185,19 @@ input, select, textarea {
 					outline: 0;
 				}
 
+				/* Hover and active nav links */
 				#nav > ul > li:hover > a, #nav > ul > li.active > a {
 					background: #f3f3f3;
 				}
 
+				/* Current nav item */
 				#nav > ul > li.current > a {
 					background: #03bafc;
 					color: #fff !important;
 					font-weight: 700;
 				}
 
+	/* Dropdown */
 	.dropotron {
 		border-radius: 5px;
 		background-color: #252122;
@@ -2138,6 +2212,7 @@ input, select, textarea {
 		list-style: none;
 	}
 
+		/* Dropdown links */
 		.dropotron a, .dropotron span {
 			color: #aaa;
 			text-decoration: none;
@@ -2392,7 +2467,7 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				padding: 4em 0 3em 0;
+				padding: 0 0 3em 0; /* remove top padding */
 			}
 
 		/* Banner */
@@ -2484,7 +2559,7 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				padding: 3.5em 0 3em 0;
+				padding: 0 0 3em 0;
 			}
 
 		/* Nav */
