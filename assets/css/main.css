@@ -2172,10 +2172,10 @@ input, select, textarea {
 		}
 
 
-	/* When top-bar floats, make nav links white for contrast */
+	/* When top-bar floats, make nav links white for contrast
 		.top-bar.floating #nav > ul > li > a {
 			color: #5d5d5d !important;
-		}
+		} */
 
 		/* no body offset needed when using sticky positioning */
 
