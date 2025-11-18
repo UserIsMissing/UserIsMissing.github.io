@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			<!-- Nav -->
 			<nav id="nav">
 				<ul>
-					<li class="${isHomePage ? 'current' : ''}"><a href="${isProjectPage ? '../' : ''}index.html">Home</a></li>
-					<li>
+					<li class="nav-home ${isHomePage ? 'current' : ''}"><a href="${isProjectPage ? '../' : ''}index.html">Home</a></li>
+					<li class="nav-projects ${isProjectPage ? 'current' : ''}">
 						<a href="${isProjectPage ? '../' : ''}index.html#projects">Projects</a>
 						<ul>
 							<li><a href="${isProjectPage ? '' : 'projects/'}wet-dry-cycler.html">Wet-Dry Cycler (RNA Replicator)</a></li>
@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
 							<li><a href="${isProjectPage ? '' : 'projects/'}mechatronics-robot.html">Mechatronics Robot</a></li>
 						</ul>
 					</li>
-					<li><a href="${isProjectPage ? '../' : ''}index.html#coursework">Coursework</a></li>
-					<li class="${isResumePage ? 'current' : ''}"><a href="${isProjectPage ? '../resume-page.html' : 'resume-page.html'}">CV/Resume</a></li>
-					<li><a href="${isProjectPage ? '../' : ''}index.html#contact">Contact</a></li>
+					<li class="nav-coursework"><a href="${isProjectPage ? '../' : ''}index.html#coursework">Coursework</a></li>
+					<li class="nav-resume ${isResumePage ? 'current' : ''}"><a href="${isProjectPage ? '../resume-page.html' : 'resume-page.html'}">CV/Resume</a></li>
+					<li class="nav-contact"><a href="${isProjectPage ? '../' : ''}index.html#contact">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -49,4 +49,25 @@ document.addEventListener('DOMContentLoaded', function() {
 			alignment: 'center'
 		});
 	}
+
+	// Add scroll-based highlighting for homepage sections
+	if (isHomePage) {
+		function updateNavHighlight() {
+			// Get all nav items
+			const navHome = document.querySelector('.nav-home');
+
+			// Remove all current classes
+			const allNavs = [document.querySelector('.nav-home'), document.querySelector('.nav-projects'), document.querySelector('.nav-coursework'), document.querySelector('.nav-contact')];
+			allNavs.forEach(nav => {
+				if (nav) nav.classList.remove('current');
+			});
+
+			// Only highlight Home on homepage
+			if (navHome) navHome.classList.add('current');
+		}
+
+		// Initial check
+		setTimeout(updateNavHighlight, 100);
+	}
 });
+
