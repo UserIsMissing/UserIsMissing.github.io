@@ -27,19 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
 									<div class="col-6 col-12-small">
 										<h3>Professional Links</h3>
 										<ul class="divided">
-											<li><a href="https://linkedin.com/in/cole-schreiner" target="_blank">LinkedIn Profile</a></li>
-											<li><a href="https://github.com/UserIsMissing" target="_blank">GitHub Repositories</a></li>
-											<li><a href="${indexPath}#resume">Download Resume/CV</a></li>
-											<li><a href="mailto:ColeRobotEngineer@gmail.com">Email Me</a></li>
-										</ul>
-									</div>
-									<div class="col-6 col-12-small">
-										<h3>Quick Links</h3>
-										<ul class="divided">
-											<li><a href="${indexPath}#projects">View My Projects</a></li>
-											<li><a href="${indexPath}#coursework">Academic Work</a></li>
-											<li><a href="${indexPath}#resume">Professional Experience</a></li>
-											<li><a href="${indexPath}#intro">About Me</a></li>
+											<li><i class="fab fa-linkedin" style="margin-right: 8px; color: #03bafc;"></i><a href="https://linkedin.com/in/cole-schreiner" target="_blank">LinkedIn Profile</a></li>
+											<li><i class="fab fa-github" style="margin-right: 8px; color: #03bafc;"></i><a href="https://github.com/UserIsMissing" target="_blank">GitHub Repositories</a></li>
+											<li><i class="fas fa-file-pdf" style="margin-right: 8px; color: #03bafc;"></i><a href="${indexPath}#resume">Download Resume/CV</a></li>
+											<li><i class="fas fa-envelope" style="margin-right: 8px; color: #03bafc;"></i><a href="mailto:ColeRobotEngineer@gmail.com">Email Me</a></li>
 										</ul>
 									</div>
 								</div>
