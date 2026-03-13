@@ -2110,9 +2110,13 @@ input, select, textarea {
 		.name-banner p { font-size: 0.95rem; opacity: 0.95; display:block; }
 
 
-		/* Adjust header spacing (banner is in-flow now) */
+		/* Adjust header spacing now that the banner remains in normal page flow */
 		#header {
-			padding-top: 125px; /* keep some top spacing for visual balance */
+			padding-top: 0;
+		}
+
+		#header.header-simple {
+			padding: 0;
 		}
 
 		@media screen and (max-width: 736px) {
@@ -2126,16 +2130,15 @@ input, select, textarea {
 	.top-bar {
 		display: block;
 		width: 100%;
-		position: -webkit-sticky; /* Safari */
-		position: fixed;
-		top: 0;
-		z-index: 900;
-		background: rgba(241, 251, 255, 0.78); /* translucent */
-		backdrop-filter: blur(6px) saturate(120%);
-		box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-		border-bottom: 1px solid rgba(0,0,0,0.12);
-		transition: background 240ms ease, transform 220ms ease;
-	}		/* Custom dropdown for Projects in top bar */
+		position: relative;
+		top: auto;
+		z-index: 1;
+		background: #f1fbff;
+		box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+		border-bottom: 1px solid rgba(0,0,0,0.08);
+	}
+
+		/* Custom dropdown for Projects in top bar */
 		.top-bar #nav > ul > li {
 			position: relative;
 		}

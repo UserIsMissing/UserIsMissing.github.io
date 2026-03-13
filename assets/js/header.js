@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Create the header HTML
 	const headerHTML = `
-		<!-- Top bar: name + nav (will float together) -->
+		<!-- Shared site header -->
 		<div class="top-bar">
 			<div class="name-banner">
 				<h1><a href="${isProjectPage ? '../' : ''}index.html">Cole Schreiner</a></h1>
@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 					<li class="nav-projects ${isProjectPage ? 'current' : ''}">
 						<a href="${isProjectPage ? '../' : ''}index.html#projects">Projects</a>
 						<ul>
+							<li><a href="${isProjectPage ? '' : 'projects/'}AI_Small-Scale-UAV.html">Small-Scale UAV Neural Autopilot</a></li>
 							<li><a href="${isProjectPage ? '' : 'projects/'}wet-dry-cycler.html">Wet-Dry Cycler (RNA Replicator)</a></li>
 							<li><a href="${isProjectPage ? '' : 'projects/'}professor-piano.html">Professor Piano Glove</a></li>
 							<li><a href="${isProjectPage ? '' : 'projects/'}mechatronics-robot.html">Mechatronics Robot</a></li>
@@ -35,10 +36,15 @@ document.addEventListener('DOMContentLoaded', function() {
 		</div>
 	`;
 
-	// Find the header section and insert the top-bar
+	// Find the header section and insert the shared header only once.
 	const headerSection = document.querySelector('#header');
-	if (headerSection) {
+	if (headerSection && !headerSection.querySelector('.top-bar')) {
+		const hasExistingContent = headerSection.innerHTML.trim().length > 0;
 		headerSection.innerHTML = headerHTML + headerSection.innerHTML;
+		headerSection.classList.add('shared-header');
+		if (!hasExistingContent) {
+			headerSection.classList.add('header-simple');
+		}
 	}
 
 	// Reinitialize nav dropdowns after header is inserted
