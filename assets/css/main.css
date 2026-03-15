@@ -1535,7 +1535,7 @@ input, select, textarea {
 		}
 
 	header {
-		margin: 0 0 1.5em 0;
+		margin: 0 0 2.5em 0;
 	}
 
 		header > p {
@@ -2121,7 +2121,7 @@ input, select, textarea {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-end;
-			gap: 0.55em;
+			gap: 0.1em;
 		}
 
 		.name-banner__social {
