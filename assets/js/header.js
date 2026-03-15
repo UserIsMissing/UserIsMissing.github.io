@@ -11,8 +11,20 @@ document.addEventListener('DOMContentLoaded', function() {
 		<!-- Shared site header -->
 		<div class="top-bar">
 			<div class="name-banner">
-				<h1><a href="${isProjectPage ? '../' : ''}index.html">Cole Schreiner</a></h1>
-				<p>Robotics Engineer • UC Santa Cruz</p>
+				<div class="name-banner__copy">
+					<h1><a href="${isProjectPage ? '../' : ''}index.html">Cole Schreiner</a></h1>
+					<p>Robotics Engineer • UC Santa Cruz</p>
+				</div>
+				<div class="name-banner__contact">
+					<ul class="name-banner__social social">
+						<li><a class="icon brands fa-linkedin-in" href="https://linkedin.com/in/cole-schreiner" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><span class="label">LinkedIn</span></a></li>
+						<li><a class="icon brands fa-github" href="https://github.com/UserIsMissing" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><span class="label">GitHub</span></a></li>
+					</ul>
+					<div class="name-banner__details">
+						<a href="mailto:ColeRobotEngineer@gmail.com">ColeRobotEngineer@gmail.com</a>
+						<a href="tel:4242577168">(424) 257-7168</a>
+					</div>
+				</div>
 			</div>
 
 			<!-- Nav -->
@@ -29,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 						</ul>
 					</li>
 					<li class="nav-coursework"><a href="${isProjectPage ? '../' : ''}index.html#coursework">Coursework</a></li>
-					<li class="nav-resume ${isResumePage ? 'current' : ''}"><a href="${isProjectPage ? '../resume-page.html' : 'resume-page.html'}">CV/Resume</a></li>
+					<li class="nav-resume ${isResumePage ? 'current' : ''}"><a href="${isProjectPage ? '../resume-page.html' : 'resume-page.html'}">Resume</a></li>
 					<li class="nav-contact"><a href="${isProjectPage ? '../' : ''}index.html#contact">Contact</a></li>
 				</ul>
 			</nav>
