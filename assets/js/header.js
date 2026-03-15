@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 							<li><a href="${isProjectPage ? '' : 'projects/'}AI_Small-Scale-UAV.html">Small-Scale UAV Neural Autopilot</a></li>
 							<li><a href="${isProjectPage ? '' : 'projects/'}wet-dry-cycler.html">Wet-Dry Cycler (RNA Replicator)</a></li>
 							<li><a href="${isProjectPage ? '' : 'projects/'}professor-piano.html">Professor Piano Glove</a></li>
+							<li><a href="${isProjectPage ? '' : 'projects/'}pvnet-dog-sensor.html">PvNet Canine Gait Analysis Sensor</a></li>
 							<li><a href="${isProjectPage ? '' : 'projects/'}mechatronics-robot.html">Mechatronics Robot</a></li>
 						</ul>
 					</li>

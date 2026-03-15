@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<!--
+	Template uses Dopetrope by HTML5 UP
+-->
+<html>
+	<head>
+		<title>PvNet Canine Gait Analysis Sensor - Cole Schreiner's Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header (populated by header.js) -->
+				<section id="header"></section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+
+						<!-- Content -->
+							<article class="box post">
+								<a href="#" class="image featured"><img src="../images/PvNet_Dog/image1.jpg" alt="PvNet canine gait analysis wearable device" /></a>
+								<header>
+									<h2>PvNet Canine Gait Analysis Sensor</h2>
+									<p>Wearable inertial sensing and data logging for early veterinary gait-abnormality screening</p>
+								</header>
+
+								<section>
+									<header>
+										<h3>Project Overview</h3>
+									</header>
+									<p>
+										This project explored a lower-cost path toward early detection of abnormal gait in dogs using a wearable motion-tracking device. The concept was to capture multi-axis movement data directly from a dog during walking trials, then use that data to support downstream machine-learning analysis and 3D visualization for veterinary insight.
+									</p>
+									<p>
+										The prototype combined embedded sensing, onboard logging, and physical packaging into a harness-mounted system designed to be practical for repeated testing. Healthy-dog baseline data was collected as an early step toward distinguishing normal and abnormal stride behavior.
+									</p>
+								</section>
+
+								<section>
+									<header>
+										<h3>Project At a Glance</h3>
+									</header>
+									<div class="row">
+										<div class="col-4 col-12-small">
+											<h4>Core Goal</h4>
+											<ul>
+												<li>Support earlier and more affordable gait-abnormality screening</li>
+												<li>Collect wearable motion data for machine-learning analysis</li>
+												<li>Help identify which leg or motion pattern may be irregular</li>
+											</ul>
+										</div>
+										<div class="col-4 col-12-small">
+											<h4>System Components</h4>
+											<ul>
+												<li>Arduino Nano embedded controller</li>
+												<li>MPU-9250 inertial sensing for multi-axis motion capture</li>
+												<li>MicroSD logging, battery power, and harness-mounted packaging</li>
+											</ul>
+										</div>
+										<div class="col-4 col-12-small">
+											<h4>Development Focus</h4>
+											<ul>
+												<li>Wearable hardware integration</li>
+												<li>Reliable field data collection workflow</li>
+												<li>Preparation for ML-based gait classification and visualization</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+
+								<section>
+									<header>
+										<h3>Problem Framing</h3>
+									</header>
+									<p>
+										Traditional veterinary diagnostics can require repeated appointments, imaging, specialist referrals, and significant cost before a gait issue is clearly characterized. This concept aimed to move part of that detection process earlier by capturing objective movement data with a lightweight wearable platform.
+									</p>
+									<p>
+										Rather than replacing veterinary expertise, the system was intended to provide another layer of evidence: motion recordings from healthy and potentially unhealthy stride patterns, paired with software tools that could help flag deviations and visualize likely causes.
+									</p>
+								</section>
+
+								<section>
+									<header>
+										<h3>Embedded Device Workflow</h3>
+									</header>
+									<div class="row">
+										<div class="col-6 col-12-medium">
+											<p>
+												The device was powered by a 450 mAh battery and 5 V step-down converter feeding an Arduino Nano-based electronics stack. After initialization, a button on the enclosure started and stopped motion capture while an LED indicated active recording.
+											</p>
+											<p>
+												Sensor data from the MPU-9250 was streamed to the microcontroller and written to a MicroSD card as accelerometer, gyroscope, and magnetometer measurements. The workflow was intentionally simple so the unit could be deployed repeatedly during live walking trials with minimal operator overhead.
+											</p>
+										</div>
+										<div class="col-6 col-12-medium">
+											<a href="#" class="image fit"><img src="../images/PvNet_Dog/image16.jpg" alt="PvNet embedded hardware prototype" /></a>
+										</div>
+									</div>
+								</section>
+
+								<section>
+									<header>
+										<h3>Key Technical Objectives</h3>
+									</header>
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<ul>
+												<li>Collect enough gait data for a machine-learning model to separate healthy and unhealthy motion behavior</li>
+												<li>Determine which leg is most likely contributing to the abnormal motion pattern</li>
+												<li>Flag irregularities early enough to support earlier intervention</li>
+											</ul>
+										</div>
+										<div class="col-6 col-12-small">
+											<ul>
+												<li>Feed recorded data into visualization workflows for easier interpretation</li>
+												<li>Build a rugged enough prototype to support repeated field testing on live subjects</li>
+												<li>Establish a baseline dataset from healthy dogs for later comparison</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+
+								<section>
+									<header>
+										<h3>Prototype Hardware</h3>
+									</header>
+									<p>
+										The prototype used accessible embedded hardware and rapid fabrication methods to keep iteration fast. The enclosure, button assembly, wiring, logging hardware, and inertial sensor package were combined into a compact wearable unit that could be strapped to the dog's back using a harness.
+									</p>
+									<div class="row">
+										<div class="col-4 col-12-small">
+											<h4>Core Electronics</h4>
+											<ul>
+												<li>Arduino Nano</li>
+												<li>MPU-9250 / MPU-6500 IMU</li>
+												<li>MicroSD card adapter and storage</li>
+											</ul>
+										</div>
+										<div class="col-4 col-12-small">
+											<h4>Power and Packaging</h4>
+											<ul>
+												<li>450 mAh battery pack</li>
+												<li>5 V UBEC step-down converter</li>
+												<li>3D printed button and compact enclosure elements</li>
+											</ul>
+										</div>
+										<div class="col-4 col-12-small">
+											<h4>Integration Details</h4>
+											<ul>
+												<li>On-board wiring and breadboard prototyping</li>
+												<li>Status LED and recording control button</li>
+												<li>Harness-mounted placement for repeatable motion capture</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+
+								<section>
+									<header>
+										<h3>Testing and Data Collection</h3>
+									</header>
+									<p>
+										Early validation used two healthy dogs, a 5-year-old Labrador retriever and a 7-year-old pitbull, to capture baseline motion recordings. Those trials were used to verify device operation, logging reliability, and the feasibility of building a comparative dataset for later model development.
+									</p>
+									<p>
+										The broader plan was to pass recorded inertial data into a machine-learning system that could identify deviations from healthy gait patterns, then visualize those potential abnormalities through a 3D animation workflow that would make the underlying issue easier to interpret.
+									</p>
+								</section>
+
+								<section>
+									<header>
+										<h3>Project Gallery</h3>
+									</header>
+									<p>
+										The images below were extracted from the original project document and added directly to this site. They capture the prototype hardware, assembly details, and final wearable form factor from the original internship materials.
+									</p>
+									<div class="row">
+										<div class="col-4 col-12-small"><a href="#" class="image fit"><img src="../images/PvNet_Dog/image10.jpg" alt="PvNet project image 1" /></a></div>
+										<div class="col-4 col-12-small"><a href="#" class="image fit"><img src="../images/PvNet_Dog/image11.jpg" alt="PvNet project image 2" /></a></div>
+										<div class="col-4 col-12-small"><a href="#" class="image fit"><img src="../images/PvNet_Dog/image12.jpg" alt="PvNet project image 3" /></a></div>
+									</div>
+									<div class="row">
+										<div class="col-4 col-12-small"><a href="#" class="image fit"><img src="../images/PvNet_Dog/image13.jpg" alt="PvNet project image 4" /></a></div>
+										<div class="col-4 col-12-small"><a href="#" class="image fit"><img src="../images/PvNet_Dog/image14.jpg" alt="PvNet project image 5" /></a></div>
+										<div class="col-4 col-12-small"><a href="#" class="image fit"><img src="../images/PvNet_Dog/image15.jpg" alt="PvNet project image 6" /></a></div>
+									</div>
+									<div class="row">
+										<div class="col-4 col-12-small"><a href="#" class="image fit"><img src="../images/PvNet_Dog/image16.jpg" alt="PvNet project image 7" /></a></div>
+										<div class="col-4 col-12-small"><a href="#" class="image fit"><img src="../images/PvNet_Dog/image17.jpg" alt="PvNet project image 8" /></a></div>
+										<div class="col-4 col-12-small"><a href="#" class="image fit"><img src="../images/PvNet_Dog/image18.jpg" alt="PvNet project image 9" /></a></div>
+									</div>
+									<div class="row">
+										<div class="col-6 col-12-small"><a href="#" class="image fit"><img src="../images/PvNet_Dog/image19.jpg" alt="PvNet project image 10" /></a></div>
+										<div class="col-6 col-12-small"><a href="#" class="image fit"><img src="../images/PvNet_Dog/image1.jpg" alt="PvNet project image 11" /></a></div>
+									</div>
+								</section>
+
+								<section style="margin-top: 3em;">
+									<header>
+										<h3>Original Project Documents</h3>
+									</header>
+									<p>
+										The original internship abstract is available below in both PDF and Word format. I also embedded the PDF so the document can be reviewed directly from the portfolio page.
+									</p>
+									<ul class="actions">
+										<li><a href="PvNet_Dog_sensor_ABSTRACT.pdf" class="button large">Download PDF</a></li>
+										<li><a href="PvNet_Dog_sensor_ABSTRACT.docx" class="button alt large">Download DOCX</a></li>
+									</ul>
+									<div style="border: 1px solid #ddd; border-radius: 5px; overflow: hidden; margin-top: 1.5em;">
+										<div style="background: #252122; color: white; padding: 8px 12px; text-align: center; font-size: 0.9em;">
+											<strong>PvNet Dog Sensor Abstract</strong>
+										</div>
+										<iframe src="PvNet_Dog_sensor_ABSTRACT.pdf#toolbar=0&navpanes=0&scrollbar=0" style="width: 100%; height: 1000px; border: none;"></iframe>
+									</div>
+								</section>
+
+								<footer style="border-top: 1px solid #e0e0e0; padding-top: 2em; margin-top: 3em;">
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<ul class="actions">
+												<li><a href="../index.html#projects" class="button large">← Back to Projects</a></li>
+											</ul>
+										</div>
+										<div class="col-6 col-12-small">
+											<ul class="actions">
+												<li><a href="../index.html#contact" class="button alt large">Contact Me →</a></li>
+											</ul>
+										</div>
+									</div>
+								</footer>
+							</article>
+
+					</div>
+				</section>
+
+			<!-- Footer (populated by footer.js) -->
+				<section id="footer-placeholder"></section>
+		</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/header.js"></script>
+			<script src="../assets/js/footer.js"></script>
+			<script src="../assets/js/main.js"></script>
+	</body>
+</html>
