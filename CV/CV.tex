@@ -1,0 +1,375 @@
+
+\documentclass[letterpaper,10.5pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\usepackage{xcolor}
+\usepackage{ifthen}
+\usepackage{comment}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\color{RoyalBlue}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{Blue}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 
+    % \vspace{-2pt}
+    }
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+% Resume Sub-Heading
+\newcommand{\resumeSubheading}[4]{  
+  \vspace{-2pt}\item  
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}  
+      \textbf{#1} & \textbf{\small #2} \\
+      % Check if #3 and #4 are not empty before printing  
+      \ifthenelse{\equal{#3}{}}{}{%  
+        \textit{\small#3} &   
+        \ifthenelse{\equal{#4}{}}{}{\textit{\small #4}} \\   
+      }  
+    \end{tabular*}%
+    % Add \vspace{-7mm} if #3 and #4 are empty
+    \ifthenelse{\equal{#3}{} \AND \equal{#4}{}}{\vspace{-7mm}}{%
+      % Add a small negative space if sub-subheading exists
+      \vspace{-8pt} % Adjust this value as needed
+    }  
+}
+
+% Resume subitem (sub bullet point)
+\newcommand{\resumeSubSubItem}[1]{
+    \begin{itemize}
+        \item \small{#1}
+    \end{itemize}
+    \vspace{-5pt}
+}
+
+% Custom command for clickable links in subheadings
+\newcommand{\projectLink}[2]{ % #1 = URL, #2 = Link text
+  {\small\color{Blue}\href{#1}{[\underline{#2}]}} % Adjust color and formatting as needed
+}
+
+% % Resume Sub-Sub-Heading (unsused)
+% \newcommand{\resumeSubSubheading}[2]{
+%     \item
+%     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+%       \textit{\small#1} & \textit{\small #2} \\
+%     \end{tabular*}\vspace{-7pt}
+% }
+
+% % Resume Project Heading (unused)
+% \newcommand{\resumeProjectHeading}[2]{
+%     \item
+%     \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+%       \small#1 & \textbf{\small #2}\\
+%     \end{tabular*}\vspace{-7pt}
+% }
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{0pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+  {\Huge \scshape \textbf{Cole Schreiner}} \\ \vspace{5pt}
+  \href{https://userismissing.github.io}{\raisebox{-0.2\height}\faGithub\ {Portfolio:} \underline{UserIsMissing.GitHub.io}} ~
+  % \href{}{\raisebox{-0.2\height}{Security Clearance: Pending Secret}}  ~
+  % \small \raisebox{-0.1\height}\faPhone\  (424) 257-7168~  
+  % \href{mailto:ColeRobotEngineer@gmail.com}{\raisebox{-0.2\height}\faEnvelope\
+  % \underline{ColeRobotEngineer@gmail.com}} ~
+  % \href{}{\raisebox{-0.2\height}\faHome\ Palos Verdes, CA}
+%   \vspace{-8pt}
+% \end{center}
+
+% \begin{center}
+%   \small
+  \href{https://www.linkedin.com/in/cole-schreiner/}{\raisebox{-0.2\height}\faLinkedin\ \underline{Linkedin.com/in/cole-schreiner}   }
+  % \href{https://github.com/UserIsMissing}{\raisebox{-0.2\height}\faGithub\ \underline{Github.com/UserIsMissing}} ~
+  \href{mailto:ColeRobotEngineer@gmail.com}{\raisebox{-0.2\height}\faEnvelope\
+  \underline{ColeRobotEngineer@gmail.com}} ~
+  \vspace{-8pt}
+\end{center}
+
+
+
+\vspace{-10pt}
+%-----------PROFESSIONAL PROFILE-----------
+\section{Professional Profile}
+    \resumeSubHeadingListStart
+    \resumeItem{Robotics and electrical engineering graduate student at UC Santa Cruz with hands-on experience building embedded systems, robotic platforms, research instruments, and wearable devices from concept through validation.}
+    \resumeItem{Project background spans autonomous robotics, environmental control systems, sensor fusion, microcontroller programming, real-time control, and CAD-driven mechanical design.}
+    \resumeItem{Experienced leading small interdisciplinary teams, defining subsystem interfaces, documenting designs, and delivering complete prototypes under academic and competition deadlines.}
+    \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+  %-----------WORK EXPERIENCE-----------
+  \section{Work Experience}
+    \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {University of California, Santa Cruz}{Spring 2026}
+      {Incoming Teaching Assistant - Mechatronics}{ }
+      \resumeItemListStart
+        \resumeItem{Selected to support undergraduate mechatronics instruction through hands-on laboratory assignments spanning electrical systems, mechanical integration, embedded software, analog circuits, and motor control.}
+        \resumeItem{Guide student teams through subsystem debugging, design iteration, and system integration as they build toward the course's final robot competition.}
+        \resumeItem{Provide technical mentoring during lab development and testing, helping students connect sensing, actuation, control, and fabrication concepts in a complete robotic platform.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Palos Verdes Summer Tech Internship}{Summer 2021}
+      {Engineering Intern - Canine Gait Analysis Wearable Project}{ }
+      \resumeItemListStart
+        \resumeItem{Contributed to the development of a wearable diagnostic device intended to help veterinarians detect abnormal gait patterns in dogs earlier and at lower cost than conventional screening workflows.}
+        \resumeItem{Integrated an Arduino Nano, MPU-9250 inertial sensing, battery regulation, MicroSD logging, and harness-mounted packaging into a portable prototype capable of collecting multi-axis motion data during live canine walking trials.}
+        \resumeItem{Supported data collection and test execution with healthy dog subjects to build baseline datasets for a machine-learning pipeline aimed at distinguishing healthy and abnormal stride behavior.}
+        \resumeItem{Helped connect recorded motion data to downstream visualization and analysis workflows designed to identify likely gait irregularities and improve veterinarian insight.}
+      \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+  \vspace{-10pt}
+
+
+%-----------RESEARCH INTERESTS-----------
+\section{Research and Engineering Interests}
+  \resumeSubHeadingListStart
+    \resumeItem{Autonomous robotic systems, embedded intelligence, control systems, sensor fusion, human-interactive wearables, and scientific instrumentation for experimental research.}
+  \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+
+
+%-----------EDUCATION-----------
+\section{Education}
+    \resumeSubHeadingListStart
+    
+    \resumeSubheading
+        {University of California, Santa Cruz}
+        {Graduated 2026}
+        {Robotics Concentration     $\sim$      Graduated with Honors}{}
+        \resumeItemListStart
+            \resumeItem{Master of Science in Electrical and Computer Engineering}
+            \resumeItem{Bachelor of Science in Robotics Engineering}
+            \resumeItem{Minor in Electrical Engineering}
+        \resumeItemListEnd
+    
+    % \resumeSubheading
+    %     {El Camino Community College}
+    %     {Graduated 2022}
+    %     {M.E.S.A. Member}{}
+    %     \resumeItemListStart
+    %         \resumeItem{Associate of Science in Physics}
+    %         \resumeItem{Associate of Science in Mathematics}
+    %     \resumeItemListEnd
+    
+    \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+% %-----------TWO COLUMN SECTION: EDUCATION & EXPERIENCE-----------
+% \begin{minipage}[t]{0.48\textwidth}
+% \section*{Education}
+% \end{minipage}
+% \hfill
+% \begin{minipage}[t]{0.48\textwidth}
+% \raggedright
+% \section*{Work Experience}
+% \end{minipage}
+% \vspace{-10pt} % Adjust as needed
+% \begin{minipage}[t]{0.48\textwidth}
+%     \resumeSubHeadingListStart
+%         \resumeSubheading
+%             {Univ. of California, Santa Cruz}{Grad. 2026}
+%             {Robotics Concentration}{Grad. w/ Honors}
+%             \resumeItemListStart
+%                 \resumeItem{M.S. Electrical \& Computer Engineering}
+%                 \resumeItem{B.S. Robotics Engineering}
+%                 \resumeItem{Minor in Electrical Engineering}
+%             \resumeItemListEnd
+%     \resumeSubHeadingListEnd
+% \end{minipage}
+% \hfill
+% \begin{minipage}[t]{0.48\textwidth}
+%     \resumeSubHeadingListStart
+%         \resumeSubheading
+%             {UC Santa Cruz}{Spring 2026}
+%             {Mechatronics Teacher's Assistant}{}
+%             \resumeItemListStart
+%                 \resumeItem{Led 108 students to compete in a robotics competition}
+%                 \resumeItem{Taught Electrical, Mechanical, and Software principles}
+%                 \resumeItem{Managed 30 teams of students to complete engineering labs on schedule}
+%             \resumeItemListEnd
+%     \resumeSubHeadingListEnd
+% \end{minipage}
+% \vspace{10pt}
+
+%-----------Technical SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \item{
+  \textbf{Languages:}{ C, C++, Java, Python, Verilog, MATLAB} \\
+        
+  \textbf{Embedded and Control:}{ ESP32, Raspberry Pi, PIC32, Arduino, FreeRTOS, PID control, finite state machines, real-time sensing, data logging} \\
+
+  \textbf{Design and Fabrication:}{ SolidWorks, OnShape, AutoDesk, 3D printing, laser cutting, prototyping, electronics assembly, instrumentation and oscilloscope-based debugging} \\
+        
+  \textbf{Software and Analysis:}{ Git, Vivado, LTSpice, PyTorch, GUI development, web-based interfaces, signal processing, peak detection, normalization, and model training} \\
+        
+  \textbf{Circuit and Systems:}{ Analog filters, op-amps, power regulation, motor drivers, feedback control, RL/RLC analysis, frequency response, and sensor signal conditioning} \\
+        
+  \textbf{Engineering Areas:}{ Robotics, mechatronics, kinematics, microcontroller system design, VLSI, scientific instrumentation, machine learning, and imitation learning} \\
+
+     }
+\end{itemize}
+
+
+% % -----------EXPERIENCE-----------
+% \section{Experience}
+%     \resumeSubHeadingListStart
+
+%         \resumeSubheading
+%             {Palos Verdes Summer Tech Internship}{June, 2022 -- August, 2022}
+%             {Project Lead - Canine Medical Analysis Sensor}{}
+%             \resumeItemListStart
+%                 \resumeItem{Designed and developed a medical device to diagnose future mobility issues in dogs by measuring gait variances}
+%                 \resumeItem{Applied machine learning algorithms to 9-axis IMU telemetry and developed sensor code for efficient data collection and analysis}
+%                 \resumeItem{Assembled electronics, soldered components, designed in AutoCAD for 3D printed housing, and tested circuitry and software}
+%                 \resumeItem{Led a team to develop a fully functional prototype}
+%         \resumeItemListEnd
+
+% % \resumeSubheading
+% % {Baskin School of Engineering}{Feb 2024 -- June 2024}
+% % {Digital Logic Tutor and Grader}{Santa Cruz, CA}
+% % \resumeItemListStart
+% % \resumeItem{Taught Digital Logic using the Verilog hardware description language to complete labs successfully}
+% % \resumeItem{Graded Homework and tests alongside the professor}
+% % \resumeItemListEnd
+
+% \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+
+%-------------PROJECTS-------------------
+\section{Selected Engineering Projects}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+        {\textbf{UAV AI Autopilot and Simulation}}{February, 2026}
+        {Neural Flight Control and Behavioral Cloning}{}
+        \resumeItemListStart
+      \resumeItem{Reframed a traditional small-scale UAV autopilot problem by replacing successive loop-closure control logic with a recurrent neural network trained through behavioral cloning.}
+      \resumeItem{Built a PyTorch inference pipeline that mapped 15 flight-state inputs, including attitude, body-frame velocity, and airflow features, to continuous throttle, aileron, elevator, and rudder commands.}
+      \resumeItem{Integrated the learned controller into a university flight-simulation framework to evaluate autonomous path following, closed-loop stability, and disturbance rejection under simulated wind conditions.}
+      \resumeItem{Applied data normalization and mean-squared-error training against expert teacher demonstrations to validate whether a single learned controller could manage coupled flight dynamics in real time.}
+        \resumeItemListEnd
+
+        \resumeSubheading
+        {\textbf{Capstone - Wet-Dry Cycler (RNA Replicator) - }
+        {\projectLink{https://userismissing.github.io/projects/wet-dry-cycler.html}{Project Link}}}{2024 - 2025}
+        {Project Director - Origins of Life Simulation Device}{}
+        \resumeItemListStart
+      \resumeItem{Led a multidisciplinary capstone team in the design of an automated wet-dry cycling instrument for origins-of-life and RNA/DNA polymerization research, translating biochemistry research needs into engineering requirements and testable system specifications.}
+      \resumeItem{Developed an ESP32-based control system with programmable cycle timing, environmental sensing, safety interlocks, and closed-loop temperature and humidity regulation for repeatable laboratory protocols.}
+      \resumeItem{Designed a modular platform with multiple sample chambers, integrated data logging, remote monitoring, and web-based user interaction to support longer unattended experiments and protocol reconfiguration.}
+      \resumeItem{Managed technical integration, documentation, validation testing, and stakeholder communication with researchers while balancing mechanical design, embedded software, and experimental reliability constraints.}
+        \resumeItemListEnd
+        
+        \resumeSubheading
+      {\textbf{Professor Piano - Wearable Piano Teaching Glove - }{\projectLink{https://userismissing.github.io/projects/professor-piano.html}{Project Link}}}
+          {March, 2025}
+      {Wearable Sensing and Interactive Feedback System}{}
+        \resumeItemListStart
+      \resumeItem{Designed a wearable piano instruction glove that combined piezoelectric sensors, a 9-axis IMU, and an ESP32 to capture finger force, hand motion, and playing posture in real time.}
+      \resumeItem{Implemented signal-processing pipelines for peak detection, filtering, calibration, and movement interpretation to improve the reliability of finger press and orientation measurements across users.}
+      \resumeItem{Integrated I2S audio playback to provide immediate auditory feedback and support an interactive training experience focused on technique reinforcement and muscle-memory development.}
+      \resumeItem{Contributed to the system concept across electronics, embedded software, and ergonomic wearable design, including flexible integration considerations for comfort, repeatability, and extended use.}
+          \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Mechatronics Robot Competition - }{\projectLink{https://userismissing.github.io/projects/mechatronics-robot.html}{Project Link}}}
+      {2024}
+      {Team Integration Director - Autonomous Competition Robot}{}
+        \resumeItemListStart
+      \resumeItem{Directed subsystem integration for a five-week autonomous robot competition project, coordinating mechanical, electrical, and embedded software development under an aggressive build and test schedule.}
+      \resumeItem{Built the robot around a finite state machine architecture with sensor-driven behaviors for navigation, task execution, and fault handling, supporting deterministic operation and rapid iteration during development.}
+      \resumeItem{Designed custom electrical subsystems including analog filters, motor-control electronics, power distribution, and sensor signal-conditioning circuits to improve robustness in a noisy competition environment.}
+      \resumeItem{Managed interface definitions, team timelines, integrated testing, and system troubleshooting as the robot progressed from concept to validated competition platform against 20 teams.}
+        \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\vspace{-10pt}
+
+%-----------COURSEWORK-----------
+\section{Relevant Coursework}
+  \resumeSubHeadingListStart
+    \resumeItem{Robotics systems, robot kinematics and dynamics, feedback control systems, microcontroller system design, VLSI, circuit theory, embedded programming, and machine learning for engineered systems.}
+  \resumeSubHeadingListEnd
+\end{document}

@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 							<li><a href="${isProjectPage ? '' : 'projects/'}wet-dry-cycler.html">Wet-Dry Cycler (RNA Replicator)</a></li>
 							<li><a href="${isProjectPage ? '' : 'projects/'}professor-piano.html">Professor Piano Glove</a></li>
 							<li><a href="${isProjectPage ? '' : 'projects/'}mechatronics-robot.html">Mechatronics Robot</a></li>
+							<li><a href="${isProjectPage ? '' : 'projects/'}pvnet-dog-sensor.html">PvNet Canine Gait Analysis Sensor</a></li>
 						</ul>
 					</li>
 					<li class="nav-coursework"><a href="${isProjectPage ? '../' : ''}index.html#coursework">Coursework</a></li>
