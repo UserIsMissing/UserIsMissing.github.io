@@ -2399,17 +2399,36 @@ input, select, textarea {
 	}
 
 		#intro section {
-			margin: 4em 0;
-			padding: 1.5em 0;
+			margin: 2.5em 0;
+			padding: 1.25em 0;
 		}
 
 		#intro h2 {
-			font-size: 1.75em;
+			font-size: 1.4em;
 		}
 
 		#intro p {
 			margin: 0;
+			font-size: 1.05em;
+			line-height: 1.75em;
 		}
+
+		#intro .icon.featured {
+			width: 7.25em;
+			padding: 1.25em 0 0.55em 0;
+			margin: 0 0 3.4em 0;
+		}
+
+			#intro .icon.featured:before {
+				font-size: 3.5em;
+			}
+
+			#intro .icon.featured:after {
+				bottom: -1.6em;
+				border-top-width: 1.65em;
+				border-left-width: 3.625em;
+				border-right-width: 3.625em;
+			}
 
 		#intro .middle {
 			position: relative;
@@ -2444,8 +2463,16 @@ input, select, textarea {
 			min-width: 10em;
 		}
 
+		#intro .button.large {
+			font-size: 1.2em;
+			padding: 0.75em 1.4em;
+		}
+
 		#intro footer {
-			margin: -1em;
+			margin: 0;
+			padding-top: 0.75em;
+			position: relative;
+			z-index: 2;
 		}
 
 /* Main */
@@ -2687,7 +2714,7 @@ input, select, textarea {
 					position: relative;
 					border-top: solid 1px #dfdfdf;
 					margin: 0;
-					padding: 40px 0 0 0;
+					padding: 32px 0 0 0;
 				}
 
 					#intro section.first {
@@ -2704,7 +2731,7 @@ input, select, textarea {
 				}
 
 				#intro footer {
-					padding: 3em 0 0 0;
+					padding: 2.25em 0 0 0;
 				}
 
 					#intro footer ul.actions {
@@ -3048,12 +3075,39 @@ input, select, textarea {
 			}
 
 				#intro section {
-					padding: 40px 0 0 0;
+					padding: 32px 0 0 0;
 					margin: 20px 0 0 0;
 				}
 
 				#intro h2 {
-					font-size: 1.25em;
+					font-size: 1.1em;
+				}
+
+				#intro p {
+					font-size: 0.95em;
+					line-height: 1.65em;
+				}
+
+				#intro .icon.featured {
+					width: 6.1em;
+					padding: 1em 0 0.45em 0;
+					margin: 0 0 2.8em 0;
+				}
+
+					#intro .icon.featured:before {
+						font-size: 2.85em;
+					}
+
+					#intro .icon.featured:after {
+						bottom: -1.35em;
+						border-top-width: 1.4em;
+						border-left-width: 3.05em;
+						border-right-width: 3.05em;
+					}
+
+				#intro .button.large {
+					font-size: 1.05em;
+					padding: 0.7em 1.25em;
 				}
 
 		/* Banner */
